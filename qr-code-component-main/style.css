@@ -7,12 +7,17 @@
     --Dark-blue: hsl(218, 44%, 22%)
 }
 
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
-    font-size: 15px;
     font-family: "Outfit", sans-serif;
     background-color: var(--Light-gray);
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -26,7 +31,11 @@ body {
     max-width: 350px;
     background-color: var(--White);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 25px;
+}
+
+.main-img {
+    margin: 0px;
 }
 
 .main-img > img {
@@ -35,15 +44,21 @@ body {
 }
 
 .main-text {
-    padding: 22px 10px 22px 10px;
+    padding: 25px;
     text-align: center;
 }
 
 .main-text > h1 {
     color: var(--Dark-blue);
-    font-size: 25px;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
 }
 
 .main-text > p {
     color: var(--Grayish-blue);
+    font-size: 1.2rem;
+}
+
+.attribution {
+    margin-top: 10px;
 }
