@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    /* Primary */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    --font-1: "Outfit", sans-serif;
+}
+
+a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--White);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    font-size: 18px;
+    font-family: var(--font-1);
+    background-color: var(--main-BG);
+    color: var(--White);
+}
+
+.main {
+    max-width: 350px;
+    padding: 30px;
+    background-color: var(--card-BG);
+    border-radius: 20px;
+}
+
+figure {
+    margin: 0px;
+}
+
+.img {
+    max-width: 350px;
+    max-height: 350px;
+    background-color: var(--Cyan);
+    border-radius: 16px;
+    position: relative
+}
+
+.img > img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.img > img:hover {
+    opacity: .50;
+
+    cursor: pointer;
+}
+
+.img:hover:before {
+    position: absolute;
+    content: url(../images/icon-view.svg);
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+    cursor: pointer;
+}
+
+.txt p {
+    color: var(--Soft-blue);
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin: 10px 0px;
+}
+
+.txt > h1 {
+    font-weight: 500;
+}
+
+.txt > h1:hover {
+    color: var(--Cyan);
+}
+
+.txt-info,
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+
+.info-item:first-child > p {
+    color: var(--Cyan);
+}
+
+.txt-info {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--line);
+}
+
+.txt-autor {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.txt-autor > img {
+    width: 40px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.txt-autor > p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.txt-autor:hover a {
+    color: var(--Cyan);
+}
