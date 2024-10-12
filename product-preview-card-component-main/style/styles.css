@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --font-1: "Montserrat", serif;
+    --font-2: "Fraunces", serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-1);
+    background-color: var(--cream);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.main-image>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
+}
+
+.main-info {
+    padding: 35px 32px;
+}
+
+.main-info .product-category {
+    color: var(--dark-grayish-blue);
+    font-size: .7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    margin-bottom: 20px;
+}
+
+.main-info .product-title,
+.main-info .product-current-price {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-2);
+}
+
+.main-info .product-title {
+    color: var(--very-dark-blue);
+    line-height: 2rem;
+    margin-bottom: 25px;
+}
+
+.main-info .product-description {
+    color: var(--dark-grayish-blue);
+    font-size: .87rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.main-info .product-current-price {
+    color: var(--dark-cyan);
+}
+
+.main-info .product-old-price {
+    color: var(--dark-grayish-blue);
+    font-size: .87rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    text-decoration: line-through;
+}
+
+.main-info .cart-button {
+    background-color: var(--dark-cyan);
+
+    font-weight: 700;
+    font-size: .9rem;
+    text-decoration: none;
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 15px;
+    border-radius: 9px;
+    transition: .3s ease-out;
+}
+
+.main-info .cart-button:visited {
+    color: var(--white);
+}
+
+.main-info .cart-button:hover {
+    background-color: #113427;
+    transition: .3s ease-out;
+}
+
+@media (max-width: 600px) {
+    .main {
+        grid-template-columns: initial;
+    }
+
+    .main-image img {
+        border-radius: 10px 10px 0px 0px;
+    }
+}
